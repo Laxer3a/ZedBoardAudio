@@ -23,7 +23,7 @@ I decided to put the files and let the user integrate those :
 - The constraint file are provided.
 - The AXI Slave files are provided.
 
-#Steps
+# Steps
 (I am currently using Vivado 2016.4 but I will try to make the instructions followable on any other platform)
 
 ## Importing IP ##
@@ -84,11 +84,14 @@ in other term, read and write very quickly with the CPU)
 	
 	Write Register at base adress (0x43C0_0000 by default) +4 to push data to the DAC.
 	Read  Register at base adress (0x43C0_0000 by default) +8 to read data from the ADC.
-	
-#Schematics
+
+- Default AXI Slave design has to 16 registers. As +0,+4,+8 only are used, there are still space
+  to add other register for your specific needs.
+  
+# Schematics
 ![System Schematics](/SchematicsAudio.png)
 
-#Programming
+# Programming
 
 Note : the import created a default adress @0x43C0_0000 for the Audio Slave Device.
 
