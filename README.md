@@ -42,22 +42,22 @@ Inside the project.
 2. Select the root folder of this GIT repository.
 3. Click Apply, then OK.
 4. Create a new Block Design, then "Add IP"
-   Search for "Audio", select "AudioInOut16"
+Search for "Audio", select "AudioInOut16"
 5. Then "Add IP" again, add a Zynq processing system.
-   Now we have the CPU and the slave, let the system connect everything for us.
+Now we have the CPU and the slave, let the system connect everything for us.
 6. Right click on design, "Run Block Automation"
 7. Right click on design, "Run Connection Automation"
 8. Now we have to create the PIN for the ADAU1761.
 9. (Right click, "Create Port" multiple times)
-	OUT PINS   : AC_GPIO0, AC_ADR0, AC_ADR1, AC_MCLK, AC_SCK.
-	INOUT PINS : AC_SDA.
-	IN PINS    : CLK_100, AC_GPIO1, AC_GPIO2, AC_GPIO3.
+- OUT PINS   : AC_GPIO0, AC_ADR0, AC_ADR1, AC_MCLK, AC_SCK.
+- INOUT PINS : AC_SDA.
+- IN PINS    : CLK_100, AC_GPIO1, AC_GPIO2, AC_GPIO3.
 	
 10. Connect all pins to AudioInOut16
 11. Now remain IRQ.
-	For now current implement does not send IRQ (set to 0).
-	Not connected inside the design should not a problem, if trouble,
-	just setup the "Processing System 7" IP to authorize PL to PS interrupt.
+For now current implement does not send IRQ (set to 0).
+Not connected inside the design should not a problem, if trouble,
+just setup the "Processing System 7" IP to authorize PL to PS interrupt.
 
 	[Do not forget to save]
 	
@@ -70,23 +70,23 @@ Inside the project.
 
 ## Design Note ##
 - IRQ is not implemented yet.
-  I have tested with IRQ not connect and got no build issues.
+I have tested with IRQ not connect and got no build issues.
 - We use 2048 sample buffer into the ADC and DAC FIFO.
 (if you do not plan to let the buffer fill completly you can lower the latency,
 in other term, read and write very quickly with the CPU)
 - See programming section.
 - FIFO Store the audio data in signed 16 bit format.
 - ADAU1761 receive the data in 24 bit format. So we upsize (FIFO->DAC) and downsize (ADC->FIFO) the data.
-  Feel free to modify the Slave architecture.
+Feel free to modify the Slave architecture.
 - DAC and ADC FIFO are 32 bit wide, storing LEFT and RIGHT samples together inside one FIFO entry.
-	MSB is RIGHT.
-	LSB is LEFT.
-	
-	Write Register at base adress (0x43C0_0000 by default) +4 to push data to the DAC.
-	Read  Register at base adress (0x43C0_0000 by default) +8 to read data from the ADC.
+MSB is RIGHT.
+LSB is LEFT.
+
+Write Register at base adress (0x43C0_0000 by default) +4 to push data to the DAC.
+Read  Register at base adress (0x43C0_0000 by default) +8 to read data from the ADC.
 
 - Default AXI Slave design has to 16 registers. As +0,+4,+8 only are used, there are still space
-  to add other register for your specific needs.
+to add other register for your specific needs.
   
 # Schematics
 ![System Schematics](/SchematicsAudio.png)
