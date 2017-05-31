@@ -71,6 +71,7 @@ Inside the project.
 
 ## Design Note ##
 - IRQ is not implemented yet.
+  I have tested with IRQ not connect and got no build issues.
 - We use 2048 sample buffer into the ADC and DAC FIFO.
 (if you do not plan to let the buffer fill completly you can lower the latency,
 in other term, read and write very quickly with the CPU)
@@ -95,7 +96,7 @@ Note : the import created a default adress @0x43C0_0000 for the Audio Slave Devi
 Let's use a macro like :
 	
 ```
-volatile u32* AUDIOCHIP = ((volatile u32*)0x431C0000);
+volatile u32* AUDIOCHIP = ((volatile u32*)0x430C0000);
 ```
 	
 ## Registers :
