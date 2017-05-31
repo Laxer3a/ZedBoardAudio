@@ -79,8 +79,8 @@ in other term, read and write very quickly with the CPU)
 - ADAU1761 receive the data in 24 bit format. So we upsize (FIFO->DAC) and downsize (ADC->FIFO) the data.
   Feel free to modify the Slave architecture.
 - DAC and ADC FIFO are 32 bit wide, storing LEFT and RIGHT samples together inside one FIFO entry.
-	MSB is LEFT.
-	LSB is RIGHT.
+	MSB is RIGHT.
+	LSB is LEFT.
 	
 	Write Register at base adress (0x43C0_0000 by default) +4 to push data to the DAC.
 	Read  Register at base adress (0x43C0_0000 by default) +8 to read data from the ADC.
@@ -90,13 +90,13 @@ in other term, read and write very quickly with the CPU)
 
 #Programming
 
-	Note : the import created a default adress @0x43C0_0000 for the Audio Slave Device.
+Note : the import created a default adress @0x43C0_0000 for the Audio Slave Device.
+
+Let's use a macro like :
 	
-	Let's use a macro like :
-	
-	```
-	volatile u32* AUDIOCHIP = ((volatile u32*)0x431C0000);
-	```
+```
+volatile u32* AUDIOCHIP = ((volatile u32*)0x431C0000);
+```
 	
 ## Registers :
 
@@ -118,38 +118,40 @@ Register +8 - READ  :
 	
 ## Sample program :
 
-	```
-	volatile u32* AUDIOCHIP = ((volatile u32*)0x430C0000);
-	AUDIOCHIP[0] = 3; // Reset FIFOs.
+```
+volatile u32* AUDIOCHIP = ((volatile u32*)0x430C0000);
+AUDIOCHIP[0] = 3; // Reset FIFOs.
 
-	while (1) {
-		// WAIT FOR DAC FIFO TO BE EMPTY.
-		if ((AUDIOCHIP[0] & 1<<3)!=0) {
-			// Transmit Line-In to HP Out.
-			AUDIOCHIP[1] = AUDIOCHIP[2];
-		}
+while (1) {
+	// WAIT FOR DAC FIFO TO BE EMPTY.
+	if ((AUDIOCHIP[0] & 1<<3)!=0) {
+		// Transmit Line-In to HP Out.
+		AUDIOCHIP[1] = AUDIOCHIP[2];
 	}
-	```
+}
+```
+	
 ## SDK, How to : 
-	As usual, from Vivado, File->Export->Hardware.
-	Then inside SDK tool, create New Application Project,
-	do your thing (name, location, ...)
-	Select the already present Hardware Platform.
-	C Language,
-	Create new Board Support package.
-	Next, "Hello World" Application sample. (will create the main.c)
-	
-	Copy the sample program after 
-	
-	```
-	initPlatform();
-	```
-	
-	inside the main function of helloWorld.c
-	
-	Build, run as usual. (I won't describe here either).
-	
-	You should hear your line in into speaker.
-	You can check by doing something like AUDIOCHIP[2] & 0xFFFF0000;
-	to select only the RIGHT channel.
-	
+
+As usual, from Vivado, File->Export->Hardware.
+Then inside SDK tool, create New Application Project,
+do your thing (name, location, ...)
+Select the already present Hardware Platform.
+C Language,
+Create new Board Support package.
+Next, "Hello World" Application sample. (will create the main.c)
+
+Copy the sample program after 
+
+```
+initPlatform();
+```
+
+inside the main function of helloWorld.c
+
+Build, run as usual. (I won't describe here either).
+
+You should hear your line in into speaker.
+You can check by doing something like AUDIOCHIP[2] & 0xFFFF0000;
+to select only the RIGHT channel.
+

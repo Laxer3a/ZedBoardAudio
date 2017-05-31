@@ -1,0 +1,436 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" dir="ltr">
+<head>
+<title>I3C2 - Hamsterworks Wiki!</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="MediaWiki 1.16.2" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/mediawiki/opensearch_desc.php" title="Hamsterworks Wiki! (en)" />
+<link rel="alternate" type="application/atom+xml" title="Hamsterworks Wiki! Atom feed" href="/mediawiki/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="stylesheet" href="/mediawiki/skins/common/shared.css?270" media="screen" />
+<link rel="stylesheet" href="/mediawiki/skins/common/commonPrint.css?270" media="print" />
+<link rel="stylesheet" href="/mediawiki/skins/monobook/main.css?270" media="screen" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/mediawiki/skins/monobook/IE50Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/mediawiki/skins/monobook/IE55Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/mediawiki/skins/monobook/IE60Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/mediawiki/skins/monobook/IE70Fixes.css?270" media="screen" /><![endif]-->
+<link rel="stylesheet" href="/mediawiki/index.php?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" />
+<link rel="stylesheet" href="/mediawiki/index.php?title=MediaWiki:Print.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" media="print" />
+<link rel="stylesheet" href="/mediawiki/index.php?title=MediaWiki:Monobook.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" />
+<link rel="stylesheet" href="/mediawiki/index.php?title=-&amp;action=raw&amp;maxage=18000&amp;gen=css" />
+<script>
+var skin="monobook",
+stylepath="/mediawiki/skins",
+wgUrlProtocols="http\\:\\/\\/|https\\:\\/\\/|ftp\\:\\/\\/|irc\\:\\/\\/|gopher\\:\\/\\/|telnet\\:\\/\\/|nntp\\:\\/\\/|worldwind\\:\\/\\/|mailto\\:|news\\:|svn\\:\\/\\/",
+wgArticlePath="/mediawiki/index.php/$1",
+wgScriptPath="/mediawiki",
+wgScriptExtension=".php",
+wgScript="/mediawiki/index.php",
+wgVariantArticlePath=false,
+wgActionPaths={},
+wgServer="http://hamsterworks.co.nz",
+wgCanonicalNamespace="",
+wgCanonicalSpecialPageName=false,
+wgNamespaceNumber=0,
+wgPageName="I3C2",
+wgTitle="I3C2",
+wgAction="view",
+wgArticleId=463,
+wgIsArticle=true,
+wgUserName=null,
+wgUserGroups=null,
+wgUserLanguage="en",
+wgContentLanguage="en",
+wgBreakFrames=false,
+wgCurRevisionId=4155,
+wgVersion="1.16.2",
+wgEnableAPI=true,
+wgEnableWriteAPI=true,
+wgSeparatorTransformTable=["", ""],
+wgDigitTransformTable=["", ""],
+wgMainPageTitle="Main Page",
+wgFormattedNamespaces={"-2": "Media", "-1": "Special", "0": "", "1": "Talk", "2": "User", "3": "User talk", "4": "Hamsterworks Wiki!", "5": "Hamsterworks Wiki! talk", "6": "File", "7": "File talk", "8": "MediaWiki", "9": "MediaWiki talk", "10": "Template", "11": "Template talk", "12": "Help", "13": "Help talk", "14": "Category", "15": "Category talk"},
+wgNamespaceIds={"media": -2, "special": -1, "": 0, "talk": 1, "user": 2, "user_talk": 3, "hamsterworks_wiki!": 4, "hamsterworks_wiki!_talk": 5, "file": 6, "file_talk": 7, "mediawiki": 8, "mediawiki_talk": 9, "template": 10, "template_talk": 11, "help": 12, "help_talk": 13, "category": 14, "category_talk": 15, "image": 6, "image_talk": 7},
+wgSiteName="Hamsterworks Wiki!",
+wgCategories=[],
+wgRestrictionEdit=[],
+wgRestrictionMove=[];
+</script><script src="/mediawiki/skins/common/wikibits.js?270"></script>
+<script src="/mediawiki/skins/common/ajax.js?270"></script>
+<script src="/mediawiki/index.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=monobook&amp;270"></script>
+
+</head>
+<body class="mediawiki ltr ns-0 ns-subject page-I3C2 skin-monobook">
+<div id="globalWrapper">
+<div id="column-content"><div id="content" >
+	<a id="top"></a>
+	
+	<h1 id="firstHeading" class="firstHeading">I3C2</h1>
+	<div id="bodyContent">
+		<h3 id="siteSub">From Hamsterworks Wiki!</h3>
+		<div id="contentSub"></div>
+		<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>
+		<!-- start content -->
+<p>This <a href="/mediawiki/index.php/FPGA_Projects" title="FPGA Projects">FPGA Project</a> was started in May 2013. 
+</p><p>I2C is rapidly becoming the standard way to talk to low data rate sensors and other devices. FPGAs have no problem talking I2C, but designing a custom state machine to drive every device is painful. When more than one device shares the I2C bus this can become quite challenging.
+</p><p>With a clock rate of under 1MHz, I2C is a relatively slow use for using an FPGA's speedy logic, and to make things worse most sensors require delays of maybe a millisecond or longer. It makes little sense to build on-off super complex high speed FSMs to support such needs, making a software driven solution using a soft micro-controller an attractive alternative.
+</p><p>My Intelligent I2C controller is not a full micro-controller, but a simple programmable state machine, using about the same FPGA resources as a Picoblaze processor. 
+</p><p><a href="/mediawiki/index.php/File:I3c2.jpg" class="image"><img alt="I3c2.jpg" src="/mediawiki/images/5/59/I3c2.jpg" width="461" height="224" /></a>
+</p><p>Advantages over more generic controller such as a Picoblaze is that is is designed especially for configuring and accessing I2C devices, where as the Picoblaze will need either a software I2C implementation or an added I2C peripheral.
+</p><p><br />
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Binary_Outputs"><span class="tocnumber">1</span> <span class="toctext">Binary Outputs</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Binary_Inputs"><span class="tocnumber">2</span> <span class="toctext">Binary Inputs</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Program_Memory"><span class="tocnumber">3</span> <span class="toctext">Program Memory</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Register_outputs"><span class="tocnumber">4</span> <span class="toctext">Register outputs</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#The_controller.27s_instruction_set"><span class="tocnumber">5</span> <span class="toctext">The controller's instruction set</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#I2C_transactions"><span class="tocnumber">6</span> <span class="toctext">I2C transactions</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Example_project"><span class="tocnumber">7</span> <span class="toctext">Example project</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#An_assembler"><span class="tocnumber">8</span> <span class="toctext">An assembler</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#VHDL_source_files_for_the_controller"><span class="tocnumber">9</span> <span class="toctext">VHDL source files for the controller</span></a></li>
+</ul>
+</td></tr></table><script>if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<h2> <span class="mw-headline" id="Binary_Outputs"> Binary Outputs </span></h2>
+<p>The controller has 16 binary outputs. The controller can independently set and clear each of the output signals.
+</p>
+<h2> <span class="mw-headline" id="Binary_Inputs"> Binary Inputs </span></h2>
+<p>The controller has 16 binary inputs. The controller test the status of the input signals.
+</p><p>As a way to supply data from the rest of the FPGA fabric to the an I2C device the upper or lower 8 input signals can be written over the I2C bus. This could be extended by using the binary outputs to drive the select inputs of a mux, allowing the controller to choose which entries from a bank of registers is presented on a set of eight inputs signals.
+</p>
+<h2> <span class="mw-headline" id="Program_Memory"> Program Memory </span></h2>
+<p>The controller support up to 1024x9-bit program memory. This fills half an Xilinx Block RAM, allowing two I3C2 instances to share a single BRAM resource.
+</p><p>The only restriction is that the destination of jumps must be aligned to 8-word boundaries - giving only 64 target addresses
+</p>
+<h2> <span class="mw-headline" id="Register_outputs"> Register outputs </span></h2>
+<p>The controller can read words from the I2C device into one of thirty two registers. This is achieved through an 8-bit data port, a 5-bit address power and a single-bit write enable port.
+</p>
+<h2> <span class="mw-headline" id="The_controller.27s_instruction_set"> The controller's instruction set </span></h2>
+<table border="1">
+<tr>
+<th> Opcode </th><th> Instruction </th><th> Action
+</th></tr>
+<tr>
+<td>00nnnnnnn</td><td> JUMP m      </td><td> Set PC to 'm' (n = m/8)
+</td></tr>
+<tr>
+<td>01000nnnn</td><td> SKIPCLEAR n </td><td> Skip if input 'n' clear
+</td></tr>
+<tr>
+<td>01001nnnn</td><td> SKIPSET n   </td><td> skip if input 'n' set
+</td></tr>
+<tr>
+<td>01010nnnn</td><td> CLEAR n     </td><td> Clear output 'n'
+</td></tr>
+<tr>
+<td>01011nnnn</td><td> SET n       </td><td> Set output 'n'
+</td></tr>
+<tr>
+<td>0110nnnnn</td><td> READ n      </td><td> Read from the I2C bus to register 'n'
+</td></tr>
+<tr>
+<td>01110nnnn</td><td> DELAY m     </td><td> Delay 'm' clock cycles (n = log2(m))
+</td></tr>
+<tr>
+<td>011110000</td><td> SKIPNACK    </td><td> Skip if NACK is set
+</td></tr>
+<tr>
+<td>011110001</td><td> SKIPACK     </td><td> Skip if ACK is set
+</td></tr>
+<tr>
+<td>011110010</td><td> WRITELOW    </td><td> Write inputs 7 downto 0 to the I2C bus
+</td></tr>
+<tr>
+<td>011110011</td><td> WRITEHI     </td><td> Write inputs 15 downto 8 to the I2C bus
+</td></tr>
+<tr>
+<td>011110100</td><td> USER0       </td><td> User defined
+</td></tr>
+<tr>
+<td>.........</td><td>             </td><td>
+</td></tr>
+<tr>
+<td>011111011</td><td> USER7       </td><td> User defined
+</td></tr>
+<tr>
+<td>011111101</td><td> MASTERACK   </td><td> Send a Master ACK with the next read
+</td></tr>
+<tr>
+<td>011111110</td><td> NOP         </td><td> Do nothing
+</td></tr>
+<tr>
+<td>011111111</td><td> STOP        </td><td> Send Stop on i2C bus
+</td></tr>
+<tr>
+<td>1nnnnnnnn</td><td> WRITE n     </td><td> Output 'n' on I2C bus
+</td></tr></table>
+<h2> <span class="mw-headline" id="I2C_transactions"> I2C transactions </span></h2>
+<p>An I2C transaction starts with the first WRITE instruction, and is held open until a STOP instruction is executed. <b>Please note - failure to execute the STOP will lock the I2C bus completely!</b>
+</p>
+<h2> <span class="mw-headline" id="Example_project"> Example project </span></h2>
+<p>Here is example code required to read data from a 3D Compass sensor
+</p>
+<pre>
+;============================================================
+; Reading from the HMC5883L Compass (I2C device ID is 3C / 3D
+;------------------------------------------------------------
+	WRITE 0x3C ; Switch to continuous measurement mode
+	WRITE 0x02
+        WRITE 0x00
+	STOP
+
+reread: WRITE 0x3C ; Start Write transaction
+        WRITE 0x03 ; Pointer to Reg 3
+        STOP
+
+        WRITE 0x3D ; Start Read transaction
+	MASTERACK
+        READ  0	   ; Reg 3 - X, most significant byte
+	MASTERACK
+        READ  1    ; Reg 4 - X, least significant byte
+	MASTERACK
+        READ  2    ; Reg 5 - Y, most significant byte
+	MASTERACK
+        READ  3    ; Reg 6 - Y, least significant byte
+	MASTERACK
+        READ  4    ; Reg 7 - Z, most significant byte
+        READ  5    ; Reg 8 - Z, Least significant byte (no MACK on last read)
+        STOP
+	
+	SET   0	   ; Indicate that new, consistent data is available
+	CLEAR 0 
+        
+        DELAY 32768 ; Wait for approx 1/10th of a second
+        JUMP reread	
+
+</pre>
+<p>Save this code into "test_code.i3c2" and then compile it with the i3c2_assembler (code for which is below). This will generate a "test_code.vhd" file that can be added to your project.
+</p><p>Here is the top level VHDL module to go with this design. It captures the data being read from the sensor, and displays eight bits on the dev board's LEDs:
+</p>
+<pre>
+----------------------------------------------------------------------------------
+-- Engineer: Mike Field &lt;hamster@snap.net.nz&gt; 
+-- 
+-- Create Date: 20:18:57 05/26/2013 
+-- Module Name: i3c2_test - Behavioral 
+-- Description: The top_level module for testing the I3C2 processor 
+--              with the HMC5883L 3-axis digital compass IC
+--
+-- Revision 0.01 - File Created
+----------------------------------------------------------------------------------
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity i3c2_test is
+    Port ( clk       : in    STD_LOGIC;
+           scl       : out   STD_LOGIC;
+           sda       : inout STD_LOGIC;
+
+           switches  : in  STD_LOGIC_VECTOR (7 downto 0);
+           btn       : in   STD_LOGIC_VECTOR (3 downto 0);
+           led       : out  STD_LOGIC_VECTOR (7 downto 0);
+           
+           i2c_scl   : out std_logic := '1';
+           i2c_sda   : inout std_logic := 'Z';
+           error     : out   STD_LOGIC);
+end i3c2_test;
+
+architecture Behavioral of i3c2_test is
+   COMPONENT test_code
+      PORT( clk     : IN  std_logic;
+            address : IN  std_logic_vector(9 downto 0);          
+            data    : OUT std_logic_vector(8 downto 0));
+	END COMPONENT;
+
+	COMPONENT i3c2 GENERIC( quarter_bit_length : std_logic_vector(5 downto 0));
+      PORT( clk          : IN    std_logic;
+            inst_data    : IN    std_logic_vector( 8 downto 0);
+            inputs       : IN    std_logic_vector(15 downto 0);    
+            i2c_sda      : INOUT std_logic;      
+            inst_address : OUT   std_logic_vector( 9 downto 0);
+            i2c_scl      : OUT   std_logic;
+            outputs      : OUT   std_logic_vector(15 downto 0);
+            reg_addr     : OUT   std_logic_vector( 4 downto 0);
+            reg_data     : OUT   std_logic_vector( 7 downto 0);
+            reg_write    : OUT   std_logic;
+            error        : OUT   std_logic);
+	END COMPONENT;
+
+   signal data              : std_logic_vector(8 downto 0);
+   signal address           : std_logic_vector(9 downto 0);
+   signal inputs, outputs   : std_logic_vector(15 downto 0);
+   signal reg_write         : std_logic;
+   signal reg_data          : std_logic_vector(7 downto 0);
+   signal reg_addr          : std_logic_vector(4 downto 0);
+   
+   signal temp_mag_x, mag_x : std_logic_vector(15 downto 0);
+   signal temp_mag_y, mag_y : std_logic_vector(15 downto 0);
+   signal temp_mag_z, mag_z : std_logic_vector(15 downto 0);
+   
+begin
+   inputs(3 downto 0)  &lt;= btn;
+   inputs(15 downto 8) &lt;= switches;
+   led  &lt;= mag_x(11 downto 4);
+
+process(clK)
+   begin
+      if rising_edge(clk) then
+         -- Save the register values
+         if reg_write = '1' then
+            case reg_addr is  
+               when &quot;00000&quot; =&gt; temp_mag_x(15 downto 8) &lt;= reg_data;
+               when &quot;00001&quot; =&gt; temp_mag_x( 7 downto 0) &lt;= reg_data;
+               when &quot;00010&quot; =&gt; temp_mag_y(15 downto 8) &lt;= reg_data;
+               when &quot;00011&quot; =&gt; temp_mag_y( 7 downto 0) &lt;= reg_data;
+               when &quot;00100&quot; =&gt; temp_mag_z(15 downto 8) &lt;= reg_data;
+               when &quot;00101&quot; =&gt; temp_mag_z( 7 downto 0) &lt;= reg_data;
+               when others  =&gt; null;
+            end case;
+         end if;
+         
+         -- Present the values to the outputs when output(0) is set
+         if outputs(0) = '1' then
+            mag_x &lt;= temp_mag_x;
+            mag_y &lt;= temp_mag_y;
+            mag_z &lt;= temp_mag_z;
+         end if;
+      end if;
+   end process;
+   
+i3c2_code: test_code PORT MAP (
+      clk     =&gt; clk,
+      address =&gt; address,
+      data    =&gt; data
+  );
+   
+i3c2_controller: i3c2 GENERIC MAP ( 
+      -- Set I2C clock to 50Mhz/63/4 = 198kHz
+      quarter_bit_length   =&gt; std_logic_vector(to_unsigned(63,6))  
+   ) PORT MAP (
+      clk          =&gt; clk,
+      inst_address =&gt; address,
+      inst_data    =&gt; data,
+      i2c_scl      =&gt; i2c_scl,
+      i2c_sda      =&gt; i2c_sda,
+      inputs       =&gt; inputs,
+      outputs      =&gt; outputs,
+      reg_addr     =&gt; reg_addr,
+      reg_data     =&gt; reg_data,
+      reg_write    =&gt; reg_write,
+      error        =&gt; open
+   );
+end Behavioral;
+
+</pre>
+<h2> <span class="mw-headline" id="An_assembler"> An assembler </span></h2>
+<p><a href="/mediawiki/index.php/File:I3c2_assemble.c" title="File:I3c2 assemble.c">File:I3c2 assemble.c</a> is a simple assembler, contained in a signal source file and only required C's Standard Library.
+</p><p>Once compiled into an executable programs for the I3C2 can be compiled with "i3c2_assemble filename.i3c2".
+</p><p>This will produce the following files:
+</p>
+<ul><li> filename.lst - A listing of the compiled code (not yet implemented)
+</li><li> filename.coe - A '.coe' file for use with Xilinx's memory generator
+</li><li> filename.vhd - A generic VHDL source file which can be used to infer the program ROM.
+</li></ul>
+<p><b>This is a work in progress</b>
+</p>
+<h2> <span class="mw-headline" id="VHDL_source_files_for_the_controller"> VHDL source files for the controller </span></h2>
+<p>You can find the latest source for the I3C2 here:
+</p><p><a href="/mediawiki/index.php/File:I3c2.vhd" title="File:I3c2.vhd">File:I3c2.vhd</a>
+</p><p>And here are the constraints I use with my development board:
+</p>
+<pre>
+NET &quot;I2C_SDA&quot;		LOC = &quot;T17&quot; | IOSTANDARD=LVTTL | SLEW=SLOW | PULLUP;
+NET &quot;I2C_SCL&quot;		LOC = &quot;U18&quot; | IOSTANDARD=LVTTL | SLEW=SLOW;
+
+</pre>
+<!-- 
+NewPP limit report
+Preprocessor node count: 56/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key bitnami_mediawiki:pcache:idhash:463-0!1!0!!en!2!edit=0 and timestamp 20170531184441 -->
+<div class="printfooter">
+Retrieved from "<a href="http://hamsterworks.co.nz/mediawiki/index.php/I3C2">http://hamsterworks.co.nz/mediawiki/index.php/I3C2</a>"</div>
+		<div id='catlinks' class='catlinks catlinks-allhidden'></div>		<!-- end content -->
+				<div class="visualClear"></div>
+	</div>
+</div></div>
+<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+				 <li id="ca-nstab-main" class="selected"><a href="/mediawiki/index.php/I3C2" title="View the content page [c]" accesskey="c">Page</a></li>
+				 <li id="ca-talk" class="new"><a href="/mediawiki/index.php?title=Talk:I3C2&amp;action=edit&amp;redlink=1" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				 <li id="ca-viewsource"><a href="/mediawiki/index.php?title=I3C2&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				 <li id="ca-history"><a href="/mediawiki/index.php?title=I3C2&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="/mediawiki/index.php?title=Special:UserLogin&amp;returnto=I3C2" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(/mediawiki/skins/common/images/hamsterworks.png);" href="/mediawiki/index.php/Main_Page" title="Visit the main page"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage-description"><a href="/mediawiki/index.php/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+				<li id="n-portal"><a href="/mediawiki/index.php/Hamsterworks_Wiki!:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+				<li id="n-currentevents"><a href="/mediawiki/index.php/Hamsterworks_Wiki!:Current_events" title="Find background information on current events">Current events</a></li>
+				<li id="n-recentchanges"><a href="/mediawiki/index.php/Special:RecentChanges" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+				<li id="n-randompage"><a href="/mediawiki/index.php/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li>
+				<li id="n-help"><a href="/mediawiki/index.php/Help:Contents" title="The place to find out">Help</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/mediawiki/index.php" id="searchform">
+				<input type='hidden' name="title" value="Special:Search"/>
+				<input id="searchInput" title="Search Hamsterworks Wiki!" accesskey="f" type="search" name="search" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+			</form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="/mediawiki/index.php/Special:WhatLinksHere/I3C2" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="/mediawiki/index.php/Special:RecentChangesLinked/I3C2" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+<li id="t-specialpages"><a href="/mediawiki/index.php/Special:SpecialPages" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+				<li id="t-print"><a href="/mediawiki/index.php?title=I3C2&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>				<li id="t-permalink"><a href="/mediawiki/index.php?title=I3C2&amp;oldid=4155" title="Permanent link to this revision of the page">Permanent link</a></li>			</ul>
+		</div>
+	</div>
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer">
+	<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="/mediawiki/skins/common/images/poweredby_mediawiki_88x31.png" height="31" width="88" alt="Powered by MediaWiki" /></a></div>
+	<ul id="f-list">
+		<li id="lastmod"> This page was last modified on 13 January 2014, at 17:20.</li>
+		<li id="viewcount">This page has been accessed 16,635 times.</li>
+		<li id="privacy"><a href="/mediawiki/index.php/Hamsterworks_Wiki!:Privacy_policy" title="Hamsterworks Wiki!:Privacy policy">Privacy policy</a></li>
+		<li id="about"><a href="/mediawiki/index.php/Hamsterworks_Wiki!:About" title="Hamsterworks Wiki!:About">About Hamsterworks Wiki!</a></li>
+		<li id="disclaimer"><a href="/mediawiki/index.php/Hamsterworks_Wiki!:General_disclaimer" title="Hamsterworks Wiki!:General disclaimer">Disclaimers</a></li>
+	</ul>
+</div>
+</div>
+
+<script>if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 0.486 secs. --></body></html>
